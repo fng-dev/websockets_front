@@ -1,9 +1,13 @@
 import React from 'react';
+import chat from '../../assets/img/chat.svg';
+import App from '../../components/App/App';
+import './Home.scss';
+
 
 const Home = () => {
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="container-home">
+            <App img={chat} color="white" route="/chat" />
         </div>
     )
 }

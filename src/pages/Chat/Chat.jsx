@@ -35,11 +35,17 @@ const Chat = () => {
             console.log(error)
         })
 
+        console.log(ws.subscriptions.chat._state)
 
-
-        setInterval(() => {
-            chat.emit('getUsers')
-        }, 5000)
+        if(chat) {
+            setInterval(() => {
+                try {
+                    chat.emit('getUsers')
+                } catch(e) {
+                    console.log(e)
+                }
+            }, 5000)
+        }
 
         return () => {
             chat.emit('exit')
@@ -79,7 +85,7 @@ const Chat = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container-chat">
             <Users users={users} setName={setName} />
             <MessageContainer
                 messages={messages}
