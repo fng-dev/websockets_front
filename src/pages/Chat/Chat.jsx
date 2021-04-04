@@ -74,9 +74,13 @@ const Chat = () => {
         socket.emit('message', message)
     }
 
+    const setName = (payload) => {
+        socket.emit('changeName', payload)
+    }
+
     return (
         <div className="container">
-            <Users users={users} />
+            <Users users={users} setName={setName} />
             <MessageContainer
                 messages={messages}
                 sendMessage={sendMessage}

@@ -14,7 +14,6 @@
         width: 20%;
         height: 100vh;
         border-right: 2px solid #ECEFF1;
-        box-shadow: 3px 3px 9px #e9e9e9;
         z-index: 1000;
         overflow: auto;
 
@@ -57,7 +56,6 @@
         display: flex;
         flex-direction: column;
         background-color: #ECEFF1;
-        z-index: 1000;
 
         .messages-container{
             height: 85%;
